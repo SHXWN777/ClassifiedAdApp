@@ -19,6 +19,8 @@ public class Category {
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "category")
 	private Ads ads;
 	
+	
+	
 	public Long getIdCategory() {
 		return idCategory;
 	}
@@ -31,8 +33,12 @@ public class Category {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public Ads getAds() {
+		return ads;
+	}
+	public void setAds(Ads ads) {
+		this.ads = ads;
+	}
 	
 	
-	
-
 }

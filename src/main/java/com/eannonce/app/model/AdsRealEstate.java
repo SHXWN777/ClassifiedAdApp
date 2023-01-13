@@ -26,6 +26,7 @@ public class AdsRealEstate {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "fk_type_re_id")
 	private TypeRe TypeRe;
+
 	
 	public Long getIdAdsRe() {
 		return idAdsRe;

@@ -19,11 +19,12 @@ public class Ads {
 	@GeneratedValue (strategy=GenerationType.IDENTITY)	
 	private Long idAds;
 	private String title;
+	private String location;
 	private String pictures;
-	private Double price;
+	private Float price;
 	private String description;
-	private Date dtCreation;
-	private Date dtExpiration;
+	//private Date dtCreation;
+	//private Date dtExpiration;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinTable(name = "ads_details",
@@ -38,7 +39,8 @@ public class Ads {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "category_fk")
 	private Category category;
-		
+	
+	
 	
 	public Long getIdAds() {
 		return idAds;
@@ -52,16 +54,22 @@ public class Ads {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
 	public String getPictures() {
 		return pictures;
 	}
 	public void setPictures(String pictures) {
 		this.pictures = pictures;
 	}
-	public Double getPrice() {
+	public Float getPrice() {
 		return price;
 	}
-	public void setPrice(Double price) {
+	public void setPrice(Float price) {
 		this.price = price;
 	}
 	public String getDescription() {
@@ -70,18 +78,18 @@ public class Ads {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Date getDtCreation() {
-		return dtCreation;
-	}
-	public void setDtCreation(Date dtCreation) {
-		this.dtCreation = dtCreation;
-	}
-	public Date getDtExpiration() {
-		return dtExpiration;
-	}
-	public void setDtExpiration(Date dtExpiration) {
-		this.dtExpiration = dtExpiration;
-	}
+//	public Date getDtCreation() {
+//		return dtCreation;
+//	}
+//	public void setDtCreation(Date dtCreation) {
+//		this.dtCreation = dtCreation;
+//	}
+//	public Date getDtExpiration() {
+//		return dtExpiration;
+//	}
+//	public void setDtExpiration(Date dtExpiration) {
+//		this.dtExpiration = dtExpiration;
+//	}
 	public User getUser() {
 		return user;
 	}
@@ -94,8 +102,12 @@ public class Ads {
 	public void setStatus(Status status) {
 		this.status = status;
 	}
-	
-	
+	public Category getCategory() {
+		return category;
+	}
+	public void setCategory(Category category) {
+		this.category = category;
+	}
 	
 
 }

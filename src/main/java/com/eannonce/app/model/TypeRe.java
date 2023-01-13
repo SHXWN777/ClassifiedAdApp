@@ -15,9 +15,10 @@ public class TypeRe {
 	@GeneratedValue (strategy=GenerationType.IDENTITY)
 	private Long idTypeRe;
 	private String name;
-		
+	
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "TypeRe")
 	private AdsRealEstate adsRE;
+	
 	
 	public Long getIdTypeRe() {
 		return idTypeRe;
@@ -38,7 +39,4 @@ public class TypeRe {
 		this.adsRE = adsRE;
 	}
 	
-	
-	
-
 }

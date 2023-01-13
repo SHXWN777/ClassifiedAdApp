@@ -144,42 +144,50 @@
 				</div>
 			</div>
 			<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-0">
+			    <!-- Add Picture Profile User -->
+			    <div class="widget personal-info">
+			    <h3 class="widget-header user">Add Picture Profile User</h3>
+			    <form action="#">
+			         <!-- File chooser -->
+					 <div class="form-group choose-file">
+						<i class="fa fa-user text-center"></i>
+						<input type="file" class="form-control-file d-inline" id="input-file">
+					 </div>
+					 <!-- Submit button -->
+					 <button class="btn btn-transparent">Save</button>	
+				</form>
+			    </div>
 				<!-- Edit Personal Info -->
 				<div class="widget personal-info">
-					<h3 class="widget-header user">Edit Personal Information</h3>
-					<form action="#">
+					<h3 class="widget-header user"><a href="#">Edit Personal Information</a></h3>
+					<form action="updateUser" object="user" method="put">
 						<!-- First Name -->
 						<div class="form-group">
 						    <label for="first-name">First Name</label>
-						    <input type="text" class="form-control" id="first-name">
+						    <input type="text" name="firstName" field="firstName" class="form-control" id="first-name">
 						</div>
 						<!-- Last Name -->
 						<div class="form-group">
 						    <label for="last-name">Last Name</label>
-						    <input type="text" class="form-control" id="last-name">
+						    <input type="text" name="lastName" field="lastName" class="form-control" id="last-name">
 						</div>
-						<!-- File chooser -->
-						<div class="form-group choose-file">
-							<i class="fa fa-user text-center"></i>
-						    <input type="file" class="form-control-file d-inline" id="input-file">
-						 </div>
 						<!-- Comunity Name -->
-						<div class="form-group">
-						    <label for="comunity-name">Comunity Name</label>
-						    <input type="text" class="form-control" id="comunity-name">
-						</div>
+<!-- 						<div class="form-group"> -->
+<!-- 						    <label for="comunity-name">Comunity Name</label> -->
+<!-- 						    <input type="text" class="form-control" id="comunity-name"> -->
+<!-- 						</div> -->
 						<!-- Checkbox -->
-						<div class="form-check">
-						  <label class="form-check-label" for="hide-profile">
-						    <input class="form-check-input" type="checkbox" value="" id="hide-profile">
-						    Hide Profile from Public/Comunity
-						  </label>
-						</div>
+<!-- 						<div class="form-check"> -->
+<!-- 						  <label class="form-check-label" for="hide-profile"> -->
+<!-- 						    <input class="form-check-input" type="checkbox" value="" id="hide-profile"> -->
+<!-- 						    Hide Profile from Public/Comunity -->
+<!-- 						  </label> -->
+<!-- 						</div> -->
 						<!-- Zip Code -->
-						<div class="form-group">
-						    <label for="zip-code">Zip Code</label>
-						    <input type="text" class="form-control" id="zip-code">
-						</div>
+<!-- 						<div class="form-group"> -->
+<!-- 						    <label for="zip-code">Zip Code</label> -->
+<!-- 						    <input type="text" class="form-control" id="zip-code"> -->
+<!-- 						</div> -->
 						<!-- Submit button -->
 						<button class="btn btn-transparent">Save My Changes</button>
 					</form>

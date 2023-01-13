@@ -17,7 +17,7 @@ public class ServiceRe {
 	private String name;
 	
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "serviceRe")
-	private AdsRealEstate adsRE;
+	private AdsRealEstate adsRE;	
 	
 	
 	public Long getIdServRe() {
@@ -40,6 +40,4 @@ public class ServiceRe {
 	}
 	
 	
-	
-
 }
