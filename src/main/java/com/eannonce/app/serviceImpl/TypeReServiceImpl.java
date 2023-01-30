@@ -1,5 +1,7 @@
 package com.eannonce.app.serviceImpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,11 @@ public class TypeReServiceImpl implements TypeReService {
 	@Override
 	public TypeRe saveTypeRe(TypeRe typeRe) {
 		return typeReRepository.save(typeRe);
+	}
+
+	@Override
+	public List<TypeRe> getAllTypeRes() {
+		return typeReRepository.findAll();
 	}
 
 }

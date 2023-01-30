@@ -1,13 +1,20 @@
 package com.eannonce.app.model;
 
 import java.time.Instant;
+import java.util.Collection;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 //import javax.persistence.Temporal;
 //import javax.persistence.TemporalType;
 //import org.springframework.format.annotation.DateTimeFormat;
@@ -33,6 +40,8 @@ public class User {
 	private String password;
 	private String contact;
 	private String address;
+	
+	
 	
 	
 	public User() {
@@ -116,6 +125,7 @@ public class User {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
 
 
 	@Override

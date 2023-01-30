@@ -26,6 +26,10 @@ public class AdsRealEstate {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "fk_type_re_id")
 	private TypeRe TypeRe;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "fk_ads_id")
+	private Ads ads;
 
 	
 	public Long getIdAdsRe() {
@@ -63,6 +67,12 @@ public class AdsRealEstate {
 	}
 	public void setTypeRe(TypeRe typeRe) {
 		TypeRe = typeRe;
+	}
+	public Ads getAds() {
+		return ads;
+	}
+	public void setAds(Ads ads) {
+		this.ads = ads;
 	}
 	
 

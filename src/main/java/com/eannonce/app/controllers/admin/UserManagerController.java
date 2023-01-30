@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.eannonce.app.model.User;
 import com.eannonce.app.service.UserService;
 
+//@RequestMapping("/user")
 @Controller
 public class UserManagerController {
 	
@@ -25,17 +26,25 @@ public class UserManagerController {
 		return "admin/usermanagerAdmin";
 	}
 	
-	@GetMapping("/")
+	@GetMapping("/ListUser")
 	public String ListUser(Model model) {
-		List<User> listUsers = userService.listAll();
-		model.addAttribute("listUsers", listUsers);
-			//if (listUsers==null) {
-			//	listUsers = new ArrayList<User>();
-			//}					
-		//model.addAttribute("listUsers", userService.getAllUsers());
-		
+		model.addAttribute("listUsers", userService.getAllUsers());
 		return "admin/usermanagerAdmin";
 	}
+		
+//	@GetMapping("/")
+//	public String ListUser(Model model) {
+//		List<User> listUsers = userService.listAll();
+//		model.addAttribute("listUsers", listUsers);
+//			//if (listUsers==null) {
+//			//	listUsers = new ArrayList<User>();
+//			//}					
+//		//model.addAttribute("listUsers", userService.getAllUsers());
+//		
+//		return "admin/usermanagerAdmin";
+//	}
+	
+	
 	
 	@DeleteMapping("deleteUser/{idUser}")
 	public String deleteUser(@PathVariable (value="idUser") long idUser) {

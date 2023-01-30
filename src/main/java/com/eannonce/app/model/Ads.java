@@ -40,7 +40,8 @@ public class Ads {
 	@JoinColumn(name = "category_fk")
 	private Category category;
 	
-	
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "ads")
+	private AdsRealEstate adsRe;
 	
 	public Long getIdAds() {
 		return idAds;
@@ -107,6 +108,12 @@ public class Ads {
 	}
 	public void setCategory(Category category) {
 		this.category = category;
+	}
+	public AdsRealEstate getAdsRe() {
+		return adsRe;
+	}
+	public void setAdsRe(AdsRealEstate adsRe) {
+		this.adsRe = adsRe;
 	}
 	
 
